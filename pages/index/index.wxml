@@ -1,0 +1,20 @@
+<!-- index.wxml -->
+<view class="container" style="width: 750rpx; height: 1200rpx; display: flex; box-sizing: border-box">
+  <view class="header">
+    
+  </view>
+  <view class="footer">
+    <button bindtap="chooseImage">选择图片</button>
+  </view>
+</view>
+<view class="popup" wx:if="{{isImageSelected}}">
+  <image
+    class="popup-image"
+    src="{{tempFilePaths}}"
+    mode="aspectFit"
+  />
+  <view class="popup-footer">
+    <button bindtap="reselectImage">重新选择</button>
+    <button bindtap="UpLoad">上传</button>
+  </view>
+</view>

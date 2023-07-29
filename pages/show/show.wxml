@@ -1,0 +1,26 @@
+<!--pages/show/show.wxml-->
+<!-- index.wxml -->
+
+<view class="container">
+  <!-- 这里放置其他界面内容 -->
+  
+  <!-- 条件渲染：展示 plot -->
+  <view wx:if="{{isPlotDisplayed}}">
+    <image src="{{serverImageUrl}}" mode="aspectFit" bindtap="previewImage"bindlongpress="showOptions" />
+  </view>
+  <!-- 条件渲染：展示 results -->
+  <view wx:if="{{isResultDisplayed}}">
+    <image src="{{serverImageUrl}}" mode="aspectFit" bindtap="previewImage"  bindlongpress="showOptions"/>
+  </view>
+
+  <view wx:if="{{isImagePopupVisible}}" class="popup-container" >
+  <image class="popup-image" src="{{serverImageUrl}}" mode="aspectFit" />
+  </view>
+  
+  
+  <!-- 这里放置按钮 -->
+  <button bindtap="showPlot" style="width: 368rpx; height: 80rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">展示 plot</button>
+  <button bindtap="showResult">展示 result</button>
+  <button bindtap="navigateBack">返回</button>
+</view>
+
