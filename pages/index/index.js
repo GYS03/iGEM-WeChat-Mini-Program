@@ -1,29 +1,32 @@
 // index.js
+
 Page({
   data: {
     tempFilePaths: '',
     isImageSelected: false,
   },
   
+  
   chooseImage: function () {
     const that = this;
-    wx.chooseImage({
-      count: 1,
-      sizeType: ['original', 'compressed'],
-      sourceType: ['album', 'camera'],
-      success(res) {
-        const tempFilePaths = res.tempFilePaths[0];
+  wx.chooseMedia({
+    count: 1,
+    mediaType: ['image'],
+    sourceType: ['album', 'camera'],
+    success(res) {
+      if (res.tempFiles.length > 0) {
+        const tempFilePaths = res.tempFiles[0].tempFilePath;
         that.setData({
           tempFilePaths: tempFilePaths,
           isImageSelected: true,
         });
-        
-      },
-      fail(res) {
-        console.log('调用失败', res.errMsg);
-      },
-    });
-  },
+      }
+    },
+    fail(res) {
+      console.log('调用失败', res.errMsg);
+    },
+  });
+},
 
   reselectImage: function () {
     this.setData({
@@ -58,7 +61,7 @@ Page({
 
   sendImageToServer: function (imagePath) {
     const that = this;
-    const apiUrl = 'http://10.62.43.236:5015/api/measure_fluorescence';
+    const apiUrl = 'http://minifluorescence.com:80/api/measure_fluorescence';
     // Replace with your server address
     
     wx.uploadFile({
@@ -68,6 +71,7 @@ Page({
       formData: {
         user_id: '123456', // Additional data to send along with the image
       },
+      timeout: 10000,
       success: function (res) {
         // Handle the server's response upon successful image upload
         console.log('Image upload successful:', res);

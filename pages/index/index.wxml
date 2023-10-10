@@ -1,11 +1,12 @@
 <!-- index.wxml -->
-<view class="container" style="width: 750rpx; height: 1200rpx; display: flex; box-sizing: border-box">
-  <view class="header">
-    
-  </view>
-  <view class="footer">
-    <button bindtap="chooseImage">选择图片</button>
-  </view>
+<view class="container" style="width: 750rpx; height: 100%; display: flex; box-sizing: border-box">
+  <image class="background-image" src='/image/background.png' style="width: 750rpx; height: 100%; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx; position: absolute">
+    <image src='/image/detect.png'  style="width: 696rpx; height: 350rpx; display: block; box-sizing: border-box; left: 30rpx; top: 130rpx; position: absolute">
+    </image>
+  </image>
+  <view class="footer" style="width: 364rpx; height: 172rpx; display: block; box-sizing: border-box">
+      <button bindtap="chooseImage" style="position: relative; left: 0rpx; top: 404rpx">Choose</button>
+  </view>  
 </view>
 <view class="popup" wx:if="{{isImageSelected}}">
   <image
@@ -14,7 +15,7 @@
     mode="aspectFit"
   />
   <view class="popup-footer">
-    <button bindtap="reselectImage">重新选择</button>
-    <button bindtap="UpLoad">上传</button>
+    <button class="bottom-button1" bindtap="UpLoad" >Upload</button>
+    <button class="bottom-button2" bindtap="reselectImage">Refresh</button>
   </view>
 </view>

@@ -1,12 +1,8 @@
 <!--pages/show/show.wxml-->
-<!-- index.wxml -->
-
-<view class="container">
-  <!-- 这里放置其他界面内容 -->
-  
+<view class="container" style="position: relative; left: 0rpx; top: 0rpx; width: 750rpx; height: 290rpx; display: flex; box-sizing: border-box">
   <!-- 条件渲染：展示 plot -->
   <view wx:if="{{isPlotDisplayed}}">
-    <image src="{{serverImageUrl}}" mode="aspectFit" bindtap="previewImage"bindlongpress="showOptions" />
+    <image src="{{serverImageUrl}}"  mode="aspectFit" bindtap="previewImage"bindlongpress="showOptions" style="position: absolute; left:70rpx;" />
   </view>
   <!-- 条件渲染：展示 results -->
   <view wx:if="{{isResultDisplayed}}">
@@ -14,13 +10,22 @@
   </view>
 
   <view wx:if="{{isImagePopupVisible}}" class="popup-container" >
-  <image class="popup-image" src="{{serverImageUrl}}" mode="aspectFit" />
+    <image class="popup-image" src="{{serverImageUrl}}" mode="aspectFit" />
   </view>
-  
-  
+  <image class="background-image" src='/image/background1.png' style="width: 750rpx; height: 191rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx; position: absolute"></image>
+  <image class="background-image" src='/image/background3.png' style="width: 750rpx; height: 536rpx; display: block; box-sizing: border-box; left: 0rpx; top: 680rpx; position: absolute"></image>
+  <image src='/image/logo.png' style="width: 276rpx; height: 262rpx; display: block; box-sizing: border-box; left: 0rpx; top: -36rpx; position: absolute">
+    </image> 
   <!-- 这里放置按钮 -->
-  <button bindtap="showPlot" style="width: 368rpx; height: 80rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">展示 plot</button>
-  <button bindtap="showResult">展示 result</button>
-  <button bindtap="navigateBack">返回</button>
+  <view class='container-button' style="position: relative; left: 0rpx; top: 424rpx; width: 750rpx; height: 262rpx; display: block; box-sizing: border-box">
+    <button bindtap="showPlot" style="width: 260rpx; height: 80rpx; display: block; box-sizing: border-box; left: -277rpx; top: 120rpx; position: relative">Plot</button>
+    <button bindtap="showResult" style="position: relative; left: -18rpx; top: 40rpx; width: 260rpx; height: 80rpx; display: block; box-sizing: border-box">Result</button>
+    <button bindtap="reLaunchToIndex" style="position: relative; left: 242rpx; top: -40rpx; width: 260rpx; height: 80rpx; display: block; box-sizing: border-box">Back</button>
+  </view>
+  <view class='show-text' style="position: relative; left: 0rpx; top: 460rpx; width: 750rpx; height: 160rpx; display: block; box-sizing: border-box">
+    <text style="position: relative; left: 11rpx; top: -8rpx">{{displayText}}</text>
+  </view>
 </view>
+
+
 

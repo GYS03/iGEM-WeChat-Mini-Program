@@ -1,0 +1,53 @@
+<!--pages/list/list.wxml-->
+<view class="container" style="width: 750rpx; height: 100%; display: flex; box-sizing: border-box">
+  <image class="background-image" src='/image/background.png' style="width: 750rpx; height: 2410rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx; position: absolute">
+  </image>
+  <image src='/image/frame.png' style="position: relative; left: 0rpx; top: -172rpx; width: 652rpx; height: 318rpx; display: block; box-sizing: border-box">
+    <text class="text-content" style="position: relative; left: 36rpx; top: -306rpx; width: 616rpx; height: 214rpx; display: block; box-sizing: border-box">
+      Here is the navigation page. 
+      Ensure that the device power is turned on. 
+     Let's begin using the detection device according to the instructions below.
+    </text>
+    </image>
+  <view class='dosing' style="width: 700rpx; height: 214rpx; display: block; box-sizing: border-box; margin-top: -130rpx">
+  <image src='/image/dosing.png' style="width: 120rpx; height: 120rpx; display: block; box-sizing: border-box; position: relative; left: 580rpx; top: 214rpx"></image>
+  <image src='/image/num1.png' style="position: relative; left: 0rpx; top: 94rpx; width: 120rpx; height: 120rpx; display: inline-block; box-sizing: border-box">
+  </image>
+  <image src='/image/text-background1.png' style="width: 460rpx; height: 443rpx; display: inline-block; box-sizing: border-box; position: relative; top: -186rpx; margin-left: 302rpx; left: -182rpx">
+    <text class="text-content1" style="position: relative; left: 8rpx; top: -458rpx; width: 446rpx; height: 428rpx; display: block; box-sizing: border-box">
+      Insert the liquid dispensing tube into the chip's inlet. Click the button on the device with the right-side icon to start the injection. 
+
+      Click again to stop after injection is complete.
+    </text>
+    
+  </image>
+</view>
+
+  <view class='tc' style="width: 700rpx; height: 214rpx; display: block; box-sizing: border-box; margin-top: 50rpx">
+    <image src='/image/num2.png' style="position: relative; left: 0rpx; top: 518rpx; width: 120rpx; height: 120rpx; display: inline-block; box-sizing: border-box"></image>
+    <image src='/image/tc.png' style="position: relative; left: 466rpx; top: 518rpx; width: 120rpx; height: 120rpx; display: inline-block; box-sizing: border-box"></image>
+    <image src='/image/text-background2.png' style="width: 460rpx; height: 544rpx; display: inline-block; box-sizing: border-box; position: relative; top: 266rpx; margin-left: 302rpx; left: -182rpx">
+      <text class="text-content1" style="position: relative; left: 15rpx; top: -554rpx; width: 432rpx; height: 522rpx; display: block; box-sizing: border-box">
+        Pull out the device drawer, place the chip on the heating pad, push it back to its original position, and click the button on the device with the right-side icon to start heating.
+
+        Click again to stop after heating is complete.
+    </text>
+      
+    </image>
+  </view>
+    
+  <view class='fd' style="width: 700rpx; height: 214rpx; display: block; box-sizing: border-box; margin-top: 50rpx">
+  <image src='/image/num3.png' style="position: relative; left: 0rpx; top: 1048rpx; width: 120rpx; height: 120rpx; display: inline-block; box-sizing: border-box"></image>
+  <image src='/image/fd.png' style="position: relative; left: 460rpx; top: 1009rpx; width: 120rpx; height: 120rpx; display: inline-block; box-sizing: border-box"></image>
+  <image src='/image/text-background3.png' style="width: 460rpx; height: 626rpx; display: inline-block; box-sizing: border-box; position: relative; top: 668rpx; margin-left: 302rpx; left: -182rpx">
+    <text class="text-content1" style="position: relative; left: 10rpx; top: -638rpx; width: 440rpx; height: 505rpx; display: block; box-sizing: border-box">
+      Place the phone in the device slot, click the button on the device with the right-side icon to turn on the excitation light, then click the image icon in the bottom right corner of the mini-program to start fluorescence detection.
+      
+      Click again to stop after detecting is complete.
+    </text>
+      
+  </image>
+  </view>
+    
+</view>
+

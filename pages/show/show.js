@@ -4,13 +4,17 @@ Page({
   data: {
     showImage: false,
     serverImageUrl: '',
+    displayText: "Select the button you want to view the content, click on the picture to enlarge it for observation, long press on the picture to save it in the local album.",
     isImagePopupVisible: false, // 是否显示图片弹出窗口
   },
 
   // 小程序端代码
 showPlot: function () {
+  this.setData({
+    displayText: "The Plot image shows the curve fitting results of fluorescence detection. "
+  });
   const that = this;
-  const apiUrl = 'http://10.62.43.236:5015/api/measure_fluorescence_plot'; // 修改为服务器返回结果图片的接口地址
+  const apiUrl = 'http://minifluorescence.com:80/api/measure_fluorescence_plot'; // 修改为服务器返回结果图片的接口地址
   wx.request({
     url: apiUrl,
     method: 'POST',
@@ -78,7 +82,10 @@ showPlot: function () {
 
 showResult: function () {
   const that = this;
-  const apiUrl = 'http://10.62.43.236:5015/api/measure_fluorescence_results'; // 修改为服务器返回结果图片的接口地址
+  const apiUrl = 'http://minifluorescence.com:80/api/measure_fluorescence_results'; // 修改为服务器返回结果图片的接口地址
+  this.setData({
+    displayText: "The Result image is used to display the contours of the fluorescent regions. "
+  });
   wx.request({
     url: apiUrl,
     method: 'POST',
@@ -156,16 +163,13 @@ previewImage: function () {
 showOptions: function () {
   const that = this;
   wx.showActionSheet({
-    itemList: ['保存图片', '分享'],
+    itemList: ['Save'],
     success: function (res) {
       // res.tapIndex 为用户点击的选项的索引，0 表示保存图片，1 表示发送给朋友
       if (res.tapIndex === 0) {
         // 保存图片到相册
         that.saveImageToAlbum();
-      } else if (res.tapIndex === 1) {
-        // 发送给朋友
-        that.shareImage();
-      }
+      } 
     },
     fail: function (err) {
       console.error('显示选项框失败', err);
@@ -197,32 +201,26 @@ saveImageToAlbum: function () {
   });
 },
 
-// 发送给朋友
-shareImage: function () {
-  const that = this;
-  wx.showShareMenu({
-    withShareTicket: true,
-    success: function () {
-      wx.onShareAppMessage(function () {
-        return {
-          imageUrl: that.data.serverImageUrl,
-        };
-      });
+
+
+
+
+reLaunchToIndex: function () {
+  wx.reLaunch({
+    url: '/pages/index/index',
+    success: function(res) {
+      console.log('Navigated to index page successfully');
     },
-    fail: function (err) {
-      console.error('显示分享菜单失败', err);
+    fail: function(err) {
+      console.log('Failed to navigate to index page');
     }
   });
-},
+}
 
 
 
 
 
-  navigateBack: function () {
-    // 返回到上一页
-    wx.navigateBack({
-      delta: 1,
-    });
-  },
+
 });
+

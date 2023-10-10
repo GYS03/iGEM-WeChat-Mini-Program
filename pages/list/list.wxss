@@ -1,0 +1,6 @@
+/* pages/list/list.wxss */
+.text-content1{
+  font-size: 33rpx;
+  line-height: 1.5;
+  color: #333;
+}

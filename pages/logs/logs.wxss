@@ -1,8 +1,32 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+.container{
+  width: 100%;
+  height: 600rpx;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  
 }
-.log-item {
-  margin: 10rpx;
+.background-image{
+  position: absolute;
+  width: 100%;
+  height: 600rpx;
 }
+.DNA {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  background-color: transparent; /* 设置图片背景为透明 */
+}
+
+.text-box {
+  background-color: white; /* 设置白色背景 */
+  padding: 10px; /* 可选：添加内边距以增加文本框的外观 */
+}
+
+.text-content {
+  font-size: 33rpx;
+  line-height: 1.5;
+  color: #333;
+}
+

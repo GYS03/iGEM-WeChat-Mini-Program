@@ -1,6 +1,20 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:key="timeStamp" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log.date}}</text>
-  </block>
+<view class="container" style="width: 750rpx; height: 100%; display: flex; box-sizing: border-box;">
+  <image class="background-image" src='/image/background.png' style="width: 750rpx; height: 1494rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx; position: absolute">
+    <image src='/image/z1.png'  style="width: 710rpx; height: 241rpx; display: block; box-sizing: border-box; left: 0rpx; top: 104rpx; position: absolute"></image>
+    <image src='/image/z2.png' style="width: 610rpx; height: 125rpx; display: block; box-sizing: border-box; left: 0rpx; top: 8rpx; position: absolute"></image> 
+  </image>
+    <view class="text-box" style="width: 600rpx; height: 638rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: 416rpx">
+      <text class="text-content" style="position: relative; left: 15rpx; top: 4rpx">
+        Welcome to the BIT Fluorescence Detection WeChat Mini Program！
+
+        Click the checklist icon below to learn about our equipment usage process ！ 
+        Or click the picture icon below to perform fluorescence testing.
+      </text>
+      <image class="DNA" src='/image/DNA.png' style="width: 352rpx; height: 443rpx; display: block; box-sizing: border-box; left: 124rpx; top: -256rpx; position: relative">
+      </image>
+      <image class="eye" src='/image/eye.png' style="width: 200rpx; height: 200rpx; display: inline-block; box-sizing: border-box; position: relative; left: -20rpx; top: -456rpx"></image>
+    </view>
+  <image src='/image/logo.png' style="width: 276rpx; height: 262rpx; display: block; box-sizing: border-box; left: 0rpx; top: 286rpx; position: absolute">
+  </image>  
 </view>

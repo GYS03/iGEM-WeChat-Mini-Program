@@ -1,1 +1,14 @@
 /* pages/show/show.wxss */
+.container {
+  position: relative;
+}
+
+.background-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 750rpx;
+  height: 1212rpx;
+  z-index: 0; /* 设置较小的 z-index 值，使其处于底层 */
+}
+

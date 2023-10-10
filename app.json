@@ -2,12 +2,13 @@
   "pages": [
     "pages/logs/logs",
     "pages/index/index",
-    "pages/show/show"
+    "pages/show/show",
+    "pages/list/list"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "BIT DNA Guardian",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",
@@ -19,16 +20,22 @@
     "list": [
       {
         "pagePath": "pages/logs/logs",
-        "text": "介绍",
         "iconPath": "image/_home.png",
         "selectedIconPath": "image/home.png"
+        
+      },
+      {
+        "pagePath": "pages/list/list",
+        "iconPath": "image/_inc.png",
+        "selectedIconPath": "image/inc.png"
       },
       {
         "pagePath": "pages/index/index",
-        "text": "拍摄",
         "iconPath": "image/_img.png",
         "selectedIconPath": "image/img.png"
+        
       }
+      
     ]
   }
 }
